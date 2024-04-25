@@ -22,22 +22,19 @@ function PLUGIN:PreInstall(ctx)
 		error("get checksum failed")
 	end
 
-	print("filename", filename)
+	--- @type string | nil
+	local sha256 = nil
 
-	local sha256
-
-	local lines = {}
-	for word in string.gmatch(resp.body, "%S+") do
-		table.insert(lines, word)
-	end
-
-	for i = 1, #lines, 2 do
-		local hash = lines[i]
-		local name = lines[i + 1]
+	for line in string.gmatch(resp.body, "([^\n]*)\n?") do
+		local hash, name = line:match("^(%w+)%s+(.+)$")
 		if name == filename then
 			sha256 = hash
 			break
 		end
+	end
+
+	if sha256 == nil then
+		print("SHA256 Sum not found for `" .. filename .. "`. Continuing without checksum.")
 	end
 
 	return {
