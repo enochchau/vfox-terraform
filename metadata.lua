@@ -3,16 +3,15 @@ PLUGIN = {}
 
 --- !!! MUST BE SET !!!
 --- Plugin name
-PLUGIN.name = "your plugin name"
+PLUGIN.name = "terraform"
 --- Plugin version
 PLUGIN.version = "0.0.1"
 --- Plugin homepage
-PLUGIN.homepage = "https://github.com/version-fox/vfox-plugin-template"
+PLUGIN.homepage = "https://github.com/enochchau/vfox-terraform"
 --- Plugin license, please choose a correct license according to your needs.
 PLUGIN.license = "Apache 2.0"
 --- Plugin description
-PLUGIN.description = "your plugin description"
-
+PLUGIN.description = "Terraform plugin, https://www.terraform.io/"
 
 --- !!! OPTIONAL !!!
 --[[
@@ -35,10 +34,8 @@ NOTE:
  --]]
 PLUGIN.manifestUrl = "https://github.com/version-fox/vfox-plugin-template/releases/download/manifest/manifest.json"
 -- Some things that need user to be attention!
-PLUGIN.notes = {
-}
+PLUGIN.notes = {}
 
 --- List legacy configuration filenames for determining the specified version of the tool.
 --- such as ".node-version", ".nvmrc", etc.
-PLUGIN.legacyFilenames = {
-}
+PLUGIN.legacyFilenames = {}

@@ -3,10 +3,4 @@
 --- Currently can be left unimplemented!
 function PLUGIN:PostInstall(ctx)
     --- ctx.rootPath SDK installation directory
-    local rootPath = ctx.rootPath
-    local sdkInfo = ctx.sdkInfo['sdk-name']
-    local path = sdkInfo.path
-    local version = sdkInfo.version
-    local name = sdkInfo.name
-    local note = sdkInfo.note
 end
